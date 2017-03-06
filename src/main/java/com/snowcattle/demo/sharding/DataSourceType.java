@@ -4,6 +4,6 @@ package com.snowcattle.demo.sharding;
  * Created by jiangwenping on 17/3/6.
  */
 public enum  DataSourceType {
-    dataSourceType,
+    jdbc_player_db,
     ;
 }

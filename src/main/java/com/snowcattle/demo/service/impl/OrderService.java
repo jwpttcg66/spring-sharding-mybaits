@@ -17,7 +17,7 @@ public class OrderService{
     private OrderMapper orderMapper;
 
     public int insertOrder(Order order) {
-        CustomerContextHolder.setCustomerType(CustomerContextHolder.getShardingDBKeyByUserId(DataSourceType.dataSourceType, order.getUserId()));
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.getShardingDBKeyByUserId(DataSourceType.jdbc_player_db, order.getUserId()));
         return orderMapper.insertOrder(order);
     }
 }

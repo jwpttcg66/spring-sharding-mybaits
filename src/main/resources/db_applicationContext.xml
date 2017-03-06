@@ -106,7 +106,7 @@
         <property name="driverClassName" value="${jdbc-driver}" />
         <property name="url" value="${jdbc-url-2}" />
         <property name="username" value="${jdbc-user-2}" />
-        <property name="password" value="$jdbc-password-2}" />
+        <property name="password" value="${jdbc-password-2}" />
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
