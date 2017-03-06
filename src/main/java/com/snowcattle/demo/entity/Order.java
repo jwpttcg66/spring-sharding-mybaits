@@ -1,17 +1,12 @@
 package com.snowcattle.demo.entity;
 
-public class Order{
+public class Order extends AbstractShardingTable{
     private Integer orderId;
 
     private Integer userId;
 
     private String status;
 
-    private Integer sharding_table_index;
-
-    public void setSharding_table_index(Integer sharding_table_index) {
-        this.sharding_table_index = sharding_table_index;
-    }
 
     /**
      * @return order_id
@@ -53,15 +48,6 @@ public class Order{
      */
     public void setStatus(String status) {
         this.status = status;
-    }
-
-
-    public Integer getSharding_table_index() {
-        return sharding_table_index;
-    }
-
-    public void setSharding_table_index(int sharding_table_index) {
-        this.sharding_table_index = sharding_table_index;
     }
 
     @Override
