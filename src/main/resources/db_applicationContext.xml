@@ -40,7 +40,7 @@
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dynamicDataSource" />
         <property name="typeAliasesPackage" value="com.snowcattle.demo.entity"/>
         <property name="typeHandlersPackage" value="com.snowcattle.demo.handler"/>
         <property name="configLocation"  value="classpath:mybatis3/sqlMapConfig.xml"/>
