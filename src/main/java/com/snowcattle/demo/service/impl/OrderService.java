@@ -2,6 +2,8 @@ package com.snowcattle.demo.service.impl;
 
 import com.snowcattle.demo.entity.Order;
 import com.snowcattle.demo.mapper.OrderMapper;
+import com.snowcattle.demo.sharding.CustomerContextHolder;
+import com.snowcattle.demo.sharding.DataSourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,7 @@ public class OrderService{
     private OrderMapper orderMapper;
 
     public int insertOrder(Order order) {
+        CustomerContextHolder.setCustomerType(CustomerContextHolder.getShardingDBKeyByUserId(DataSourceType.dataSourceType, order.getUserId()));
         return orderMapper.insertOrder(order);
     }
 }

@@ -1,12 +1,17 @@
 package com.snowcattle.demo.sharding;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Created by jiangwenping on 17/3/6.
  */
+@Service
 public class CustomerContextHolder {
 
-    private static final ThreadLocal<String> contextHolder = new ThreadLocal<String>();
-    public static String getCustomerType() {
+    private static  final ThreadLocal<String> contextHolder = new ThreadLocal<String>();
+    private static int DB_COUNT=2;
+
+    public  static String getCustomerType() {
         return (String) contextHolder.get();
     }
     /**
@@ -15,5 +20,10 @@ public class CustomerContextHolder {
      */
     public static void setCustomerType(String customerType) {
         contextHolder.set(customerType);
+    }
+
+    public  static String getShardingDBKeyByUserId(DataSourceType dataSourceType, int userId) {
+        int dbIndex = userId % DB_COUNT;
+        return dataSourceType.toString() + dbIndex;
     }
 }

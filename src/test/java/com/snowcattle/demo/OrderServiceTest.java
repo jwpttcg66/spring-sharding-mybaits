@@ -20,10 +20,13 @@ public class OrderServiceTest {
 
     @Test
     public void test(){
-        Order order = new Order();
-        order.setUserId(1);
-        order.setOrderId(Integer.MAX_VALUE);
-        order.setStatus("测试插入");
-        orderService.insertOrder(order);
+        for(int i = 0; i < 12; i++){
+            Order order = new Order();
+            order.setUserId(i);
+            order.setOrderId(i);
+            order.setStatus("测试插入");
+            orderService.insertOrder(order);
+        }
+
     }
 }
