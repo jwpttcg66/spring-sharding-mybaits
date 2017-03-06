@@ -10,7 +10,7 @@ public class CustomerContextHolder {
 
     private static  final ThreadLocal<String> contextHolder = new ThreadLocal<String>();
     private static int DB_COUNT=3;
-
+    private static int TABLE_COUNT=2;
     public  static String getCustomerType() {
         return (String) contextHolder.get();
     }
@@ -25,5 +25,9 @@ public class CustomerContextHolder {
     public  static String getShardingDBKeyByUserId(DataSourceType dataSourceType, int userId) {
         int dbIndex = userId % DB_COUNT;
         return dataSourceType.toString() + dbIndex;
+    }
+
+    public static int getShardingDBTableIndexByUserId(int userId){
+        return userId%TABLE_COUNT;
     }
 }
