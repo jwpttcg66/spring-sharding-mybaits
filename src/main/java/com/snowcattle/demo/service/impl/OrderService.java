@@ -1,4 +1,4 @@
-package com.snowcattle.demo.service;
+package com.snowcattle.demo.service.impl;
 
 import com.snowcattle.demo.entity.Order;
 import com.snowcattle.demo.mapper.OrderMapper;

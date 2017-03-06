@@ -1,7 +1,7 @@
 package com.snowcattle.demo;
 
 import com.snowcattle.demo.entity.Order;
-import com.snowcattle.demo.service.OrderService;
+import com.snowcattle.demo.service.impl.OrderService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
