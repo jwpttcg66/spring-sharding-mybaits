@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.6</java.version>
+        <java.version>1.7</java.version>
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.5</slf4j.version>
         <log4j.version>1.2.17</log4j.version>
@@ -21,8 +21,6 @@
         <spring.version>4.3.2.RELEASE</spring.version>
         <cglib.version>2.2</cglib.version>
         <commons.dbcp.version>1.4</commons.dbcp.version>
-        <commons.pool.version>1.6</commons.pool.version>
-        <commons.lang.version>2.5</commons.lang.version>
     </properties>
 
     <dependencies>
