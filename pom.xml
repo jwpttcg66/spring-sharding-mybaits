@@ -24,26 +24,7 @@
         <commons.dbcp.version>1.4</commons.dbcp.version>
         <commons.pool.version>1.6</commons.pool.version>
         <commons.lang.version>2.5</commons.lang.version>
-
-        <maven.compiler.plugin>2.3.2</maven.compiler.plugin>
     </properties>
-
-    <build>
-        <finalName>${project.artifactId}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin}</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-
-        </plugins>
-    </build>
 
     <dependencies>
 
