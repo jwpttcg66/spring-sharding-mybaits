@@ -4,8 +4,8 @@
 
     <!--批量插入-->
     <insert id="insertOrder" parameterType="order">
-        INSERT INTO `t_order_${sharding_table_index}` (order_id, user_id, status)
-        VALUES (#{orderId},#{userId},#{status})
+        INSERT INTO `t_order_${sharding_table_index}` (id, user_id, status)
+        VALUES (#{id},#{userId},#{status})
     </insert>
 
 </mapper>

@@ -1,25 +1,19 @@
 package com.snowcattle.demo.entity;
 
 public class Order extends AbstractShardingTable{
-    private Integer orderId;
+
+    private Integer id;
 
     private Integer userId;
 
     private String status;
 
-
-    /**
-     * @return order_id
-     */
-    public Integer getOrderId() {
-        return orderId;
+    public Integer getId() {
+        return id;
     }
 
-    /**
-     * @param orderId
-     */
-    public void setOrderId(Integer orderId) {
-        this.orderId = orderId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     /**
@@ -53,7 +47,7 @@ public class Order extends AbstractShardingTable{
     @Override
     public String toString() {
         return "Order{" +
-                "orderId=" + orderId +
+                "orderId=" + id +
                 ", userId=" + userId +
                 ", status='" + status + '\'' +
                 '}';
